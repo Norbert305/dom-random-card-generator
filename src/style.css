@@ -1,1 +1,79 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+.card {
+  margin: 200px auto;
+  width: 200px;
+  height: 250px;
+  display: inline-block;
+  border: solid black 1px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.top-suit {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 40px;
+}
+.bottom-suit {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 40px;
+  transform: rotate(180deg);
+}
+
+.number {
+  font-size: 40px;
+  position: absolute;
+  top: 90px;
+  right: 90px;
+}
+
+.flip-inner {
+  width: 198px;
+  height: 248px;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front {
+  position: absolute;
+  width: 198px;
+  height: 248px;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+  background-image: url(https://opengameart.org/sites/default/files/card%20back%20red.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.flip-back {
+  position: absolute;
+  width: 198px;
+  height: 248px;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+}
+
+.flip-front {
+  background-color: white;
+}
+
+.flip-back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
